@@ -1,6 +1,4 @@
-# DumboAsAService 
-
-## PredictLikes - blogok "like-profil" alapján klaszterezése és a csoportosítás vizualizációja
+# PredictLikes - blogok "like-profil" alapján klaszterezése és a csoportosítás vizualizációja
 
 A megadott adathalmazból kizárólag a `trainUsers.json` állományt használtunk fel a feladat megoldásához. Először kinyerjük
 MapReduce-szal azon blogpárokat melyeknek van közös lájkolójuk, és a pároshoz hozzárendeljük ezen lájkolók pontos számát.
@@ -20,6 +18,8 @@ között futó él súlya a csúcsok közös lájkjainak száma.
 Az így keletkező adatmennyiség már kezelhető R-ben is. Az előbb említett gráfunkon az `igraph` gráfalgoritmusokat tartalmazó könyvtár `fastgreedy.community` algoritmusával közösségeket kerestünk, majd ezt vizualizáltuk az alábbi ábrán:
 
 ![clusters](clusters.png)
+
+A gráfból töröltük a hurokéleket, mert jelentéktelenek a probléma szempontjából.
 
 A csomópontok a közösségeket azonosítják, míg az élek vastagsága jelöli a két közösség közötti blogposzt-pár lájkolások nagyságát. Tehát egy, a vizualizáción megjelenő él súlya (vastagsága) a két közösségben lévő csomópontok között futó élek súlyainak összege. 
 

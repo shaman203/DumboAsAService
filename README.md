@@ -20,3 +20,7 @@ között futó él súlya a csúcsok közös lájkjainak száma.
 Az így keletkező adatmennyiség már kezelhető R-ben is. Az előbb említett gráfunkon az `igraph` gráfalgoritmusokat tartalmazó könyvtár `fastgreedy.community` algoritmusával közösségeket kerestünk, majd ezt vizualizáltuk az alábbi ábrán:
 
 ![clusters](clusters.png)
+
+A csomópontok a közösségeket azonosítják, míg az élek vastagsága jelöli a két közösség közötti blogposzt-pár lájkolások nagyságát. Tehát egy, a vizualizáción megjelenő él súlya (vastagsága) a két közösségben lévő csomópontok között futó élek súlyainak összege. 
+
+A közösség blog id összerendelések meghatározhatóak `blogGroups.csv` fájlból.

@@ -19,4 +19,4 @@ között futó él súlya a csúcsok közös lájkjainak száma.
 
 Az így keletkező adatmennyiség már kezelhető R-ben is. Az előbb említett gráfunkon az `igraph` gráfalgoritmusokat tartalmazó könyvtár `fastgreedy.community` algoritmusával közösségeket kerestünk, majd ezt vizualizáltuk az alábbi ábrán:
 
-[!clusters](clusters.png)
+![clusters](clusters.png)

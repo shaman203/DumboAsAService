@@ -23,4 +23,4 @@ Az így keletkező adatmennyiség már kezelhető R-ben is. Az előbb említett 
 
 A csomópontok a közösségeket azonosítják, míg az élek vastagsága jelöli a két közösség közötti blogposzt-pár lájkolások nagyságát. Tehát egy, a vizualizáción megjelenő él súlya (vastagsága) a két közösségben lévő csomópontok között futó élek súlyainak összege. 
 
-A közösség blog id összerendelések meghatározhatóak `blogGroups.csv` fájlból.
+A közösség - blog id összerendelések meghatározhatóak `blogGroups.csv` fájlból.

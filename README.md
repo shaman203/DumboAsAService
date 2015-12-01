@@ -12,7 +12,9 @@ számlálások helyesen hajtódjanak végre, tehát ne történjen meg például
 `(blog1, blog2), 1`
 `(blog2, blog1), 1`
 
-- A Reduce fázisban történik meg a kulcsok szerinti leszámlálás.
+- A Reduce fázisban történik meg a kulcsok szerinti összegzés.
 
 Végezetül egy olyan adatszerkezetet kapunk, amely egy olyan irányítatlan gráfot reprezentál, melynek csúcsai blogposztok, és két csúcs
 között futó él súlya a csúcsok közös lájkjainak száma.
+
+Az így keletkező adatmennyiség már kezelhető R-ben is. Az előbb említett gráfunkon az `igraph` gráfalgoritmusokat tartalmazó könyvtár `fastgreedy.community` algoritmusával közösségeket kerestünk, majd ezt vizualizáltuk az alábbi ábrán:

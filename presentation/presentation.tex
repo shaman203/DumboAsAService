@@ -156,19 +156,26 @@ Like profil  a mi értelmezésünkben = Ha két blognak van közös likeolója, 
 %----------------------------------------------------------------------------------------
 \begin{frame}
 \frametitle{MapReduce - Éllista építés}
-\includegraphics[scale=0.6,trim = 2cm 12cm 3cm 0cm, clip]{figures/mapreduce.pdf}
+\includegraphics[scale=0.6,trim = 2cm 17cm 3cm 0cm, clip]{figures/mapreduce.pdf} \\
+Reduce: csak a 10-nél nagyobb súlyú éleket írjuk ki
 \end{frame}
 
 %----------------------------------------------------------------------------------------
 \begin{frame}
 \frametitle{Community Search} 
-
+Fastgreedy community search [1]
+\begin{itemize}
+\item bottom-up hierarchikus megközelítés
+\item kezdetben minden csomópont egy közösség
+\item greedy: melyik két közösség összevonása eredményezné a legnagyobb \emph{modularitás} növekedést lokálisan
+\item rezolúciós hiányosság: a gráf egészéhez képest relatív kis közösségek mindig összevonódnak
+\end{itemize}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
 \begin{frame}
 \frametitle{Végeredmény és vizualizáció}
-Közel 7000 csomópont és 700k él \\~\\
+Közel 7000 csomópont és 700k él  $\rightarrow$ 54 közösség\\~\\
 \begin{columns}[t]
 	
 	\column{.5\textwidth} % Left column and width
@@ -196,8 +203,8 @@ Közel 7000 csomópont és 700k él \\~\\
 		Gráf feldolgozás
       \begin{itemize}
 		\item R
-        \item igraph R csomag [1]
-		\item BioFabric R port [2]
+        \item igraph R csomag [2]
+		\item BioFabric R port [3]
       \end{itemize}
 \end{columns}
 \end{frame}
@@ -213,6 +220,7 @@ Közel 7000 csomópont és 700k él \\~\\
 \frametitle{Hivatkozások}
 \small{
 \begin{enumerate}
+\item http://arxiv.org/abs/cond-mat/0408187
 \item http://igraph.org/r/
 \item https://github.com/wjrl/RBioFabric/blob/master/R/bioFabric.R
 \end{enumerate}

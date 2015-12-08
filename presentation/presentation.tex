@@ -1,0 +1,224 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+\setbeamertemplate{headline}{}
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+  \setbeamertemplate{footline}%{miniframes theme}
+  {%
+    \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+      \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
+      \hfill%
+      {\usebeamerfont{institute in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+      {\usebeamerfont{title in head/foot}\insertshorttitle} \hfill     \insertframenumber/\inserttotalframenumber%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+    \end{beamercolorbox}
+  }
+
+
+\usepackage{listings}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[utf8]{inputenc}
+\usepackage[magyar]{babel}
+\usepackage{fixltx2e}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[PredictLikes]{ DumboAsAService \\ PredictLikes: Blog like-profil klaszterezés} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author[DumboAsAService]{Nótai István (notaiistv@gmail.com)\\ Szakállas Dávid(david.szakallas@gmail.com)	\\ Mátyás-Barta Csongor(mbcsongor@gmail.com)} % Your name
+
+\institute[BME]{} % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+
+\begin{frame}[plain]
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Feladat értelmezés}
+PredictLikes - blogok "like-profil" alapján klaszterezése és a csoportosítás vizualizációja:
+
+Like profil  a mi értelmezésünkben = Ha két blognak van közös likeolója, akkor ők hasonló blogok.
+\\~\\
+\begin{tabular}{cl}  
+         \begin{tabular}{c}
+		 
+			 \parbox{0.5\linewidth}{%
+			\{"uid": "34168956",   \\
+			"likes": 
+			
+			[\{"blog": "18164949"\},  
+			
+			\{"blog": "6789"\}]\}
+			}
+           \end{tabular}
+           & \begin{tabular}{c}
+              \includegraphics[scale=0.6,trim = 3.5cm 16.5cm 10cm 9cm, clip]{figures/graf.pdf}
+         \end{tabular}  \\
+\end{tabular}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{MapReduce - Éllista építés}
+\includegraphics[scale=0.6,trim = 2cm 12cm 3cm 0cm, clip]{figures/mapreduce.pdf}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Community Search} 
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Végeredmény és vizualizáció}
+Közel 7000 csomópont és 700k él \\~\\
+\begin{columns}[t]
+	
+	\column{.5\textwidth} % Left column and width
+		\centering
+		igraph \\
+		\includegraphics[width = 5cm, trim = 7.5cm 1cm 5.5cm 1cm, clip]{figures/groups.pdf}
+	\column{.5\textwidth} % Right column and width
+		\centering
+		BioFabric \\~\\
+		\includegraphics[width = 5cm, trim = 2cm 3.5cm 1cm 1.5cm, clip]{figures/biofabric.pdf}
+\end{columns}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Használt eszközök} % Table of contents slide, comment this block out to remove it
+\begin{columns}[t]
+	\column{.5\textwidth} % Left column and width
+		Éllista építés
+      \begin{itemize}
+        \item local Hadoop MapReduce(Java)
+        \item 15GB RAM
+      \end{itemize}
+	\column{.5\textwidth} % Right column and width
+		Gráf feldolgozás
+      \begin{itemize}
+		\item R
+        \item igraph R csomag [1]
+		\item BioFabric R port [2]
+      \end{itemize}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------
+\begin{frame}[plain]
+\Huge{\centerline{Köszönjük a figyelmet!}}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}[plain]
+\frametitle{Hivatkozások}
+\small{
+\begin{enumerate}
+\item http://igraph.org/r/
+\item https://github.com/wjrl/RBioFabric/blob/master/R/bioFabric.R
+\end{enumerate}
+}
+\end{frame}
+
+
+%------------------------------------------------
+\end{document}

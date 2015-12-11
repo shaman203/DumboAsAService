@@ -1,6 +1,17 @@
 # PredictLikes - blogok "like-profil" alapján klaszterezése és a csoportosítás vizualizációja
 
-A megadott adathalmazból kizárólag a `trainUsers.json` állományt használtunk fel a feladat megoldásához. Először kinyerjük
+A megadott adathalmazból kizárólag a `trainUsers.json` állományt használtunk fel a feladat megoldásához. 
+
+A fájl tartalmából egy részlet:
+
+```json
+{"inTestSet": false, "uid": "34168956", "likes": [{"blog": "18164949", "post_id": "1740778", "like_dt": "2012-04-05 14:10:56"}]}
+{"inTestSet": false, "uid": "7136386", "likes": [{"blog": "272", "post_id": "1340514", "like_dt": "2012-04-25 12:48:52"}]}
+{"inTestSet": false, "uid": "684237", "likes": [{"blog": "336773", "post_id": "1943657", "like_dt": "2012-04-16 19:38:00"}]}
+...
+```
+
+Először kinyerjük
 MapReduce-szal azon blogpárokat melyeknek van közös lájkolójuk, és a pároshoz hozzárendeljük ezen lájkolók pontos számát.
 
 - A Map fázisban minden felfedezett `(blog1, blog2)` kulcshoz egy egyest rendelünk. Mivel a bemeneti adat minden sora egy konkrét

@@ -28,12 +28,19 @@ számlálások helyesen hajtódjanak végre, tehát ne történjen meg például
 Végezetül egy olyan adatszerkezetet kapunk, amely egy olyan irányítatlan gráfot reprezentál, melynek csúcsai blogposztok, és két csúcs
 között futó él súlya a csúcsok közös lájkjainak száma.
 
+A Java MapReduce taszkunk forráskódja megtalálható [itt](https://github.com/shaman203/DumboAsAService/blob/master/BlogClusterMR/src/main/java/com/blogclustermr/EdgeLister.java).
+
+
 Az így keletkező adatmennyiség már kezelhető R-ben is. Az előbb említett gráfunkon az `igraph` gráfalgoritmusokat tartalmazó könyvtár `fastgreedy.community` algoritmusával közösségeket kerestünk, majd ezt vizualizáltuk az alábbi ábrán:
 
 ![clusters](clusters.png)
 
 A gráfból töröltük a hurokéleket, mert jelentéktelenek a probléma szempontjából.
 
-A csomópontok a közösségeket azonosítják, míg az élek vastagsága jelöli a két közösség közötti blogposzt-pár lájkolások nagyságát. Tehát egy, a vizualizáción megjelenő él súlya (vastagsága) a két közösségben lévő csomópontok között futó élek súlyainak összege. 
+A csomópontok a közösségeket azonosítják, míg az élek vastagsága jelöli a két közösség közötti blogposzt-pár lájkolások nagyságát. Tehát egy, a vizualizáción megjelenő él súlya (vastagsága) a két közösségben lévő csomópontok között futó élek súlyainak összege.
+
+BioFabric-kal vizualizálva a gráfunkat:
+
+![biofabric](presentation/figures/biofabric.pdf)
 
 A közösség - blog id összerendelések meghatározhatóak `blogGroups.csv` fájlból.

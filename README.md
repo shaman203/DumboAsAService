@@ -41,6 +41,6 @@ A csomópontok a közösségeket azonosítják, míg az élek vastagsága jelöl
 
 BioFabric-kal vizualizálva a gráfunkat:
 
-![biofabric](presentation/figures/biofabric.pdf)
+![biofabric](biofabric.png)
 
 A közösség - blog id összerendelések meghatározhatóak `blogGroups.csv` fájlból.

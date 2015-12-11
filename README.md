@@ -10,6 +10,8 @@ A fájl tartalmából egy részlet:
 {"inTestSet": false, "uid": "684237", "likes": [{"blog": "336773", "post_id": "1943657", "like_dt": "2012-04-16 19:38:00"}]}
 ...
 ```
+A sorok tehát az egyes felhasználók lájkolásait tartalmazzák.
+Ami számunkra fontos az a `uid` tulajdonság (property) valamint a `likes` tulajdonság egyes elemeiből a `blog` azonosítók.
 
 Először kinyerjük
 MapReduce-szal azon blogpárokat melyeknek van közös lájkolójuk, és a pároshoz hozzárendeljük ezen lájkolók pontos számát.

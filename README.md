@@ -43,4 +43,6 @@ BioFabric-kal vizualizálva a gráfunkat:
 
 ![biofabric](biofabric.png)
 
+Az R kódunk megtalálható [itt](https://github.com/shaman203/DumboAsAService/blob/master/igraphExample.R).
+
 A közösség - blog id összerendelések meghatározhatóak `blogGroups.csv` fájlból.
